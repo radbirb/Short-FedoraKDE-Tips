@@ -1,9 +1,11 @@
 # General Fedora Tips.
 
 **Enable RPMFusion:** https://rpmfusion.org/Configuration / 
+
 ``sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm``
 
-**Enable Flathub:** You're on KDE spin, if you want to enable it via discover, go to Settings and click the button "Enable Flathub", or 
+**Enable Flathub:** You're on KDE spin, if you want to enable it via discover, go to Settings and click the button "Enable Flathub", or
+
 ``flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`` 
 via the terminal.
 
