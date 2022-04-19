@@ -9,8 +9,11 @@ via the terminal.
 
 **Got nvidia?**
 After enabling RPMFusion, run 
+
 ``sudo dnf install akmod-nvidia  xorg-x11-drv-nvidia-cuda``
+
 Reboot.
+
 NOTE: I don't use Nvidia, nor am I very well versed in Nvidia on Linux, but the above should work for *most* people with 900+ series cards.
 
 # Optional "debloating" steps:* 
