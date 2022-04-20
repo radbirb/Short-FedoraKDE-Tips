@@ -10,6 +10,17 @@
 
 via the terminal.
 
+**Additionnal Multimedia Codecs**
+
+After enabling RPMFusion, run the commands below
+
+```sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel```
+
+```sudo dnf install lame\* --exclude=lame-devel```
+
+```sudo dnf group upgrade --with-optional Multimedia``` 
+
+
 **Got nvidia?**
 After enabling RPMFusion, run 
 
@@ -17,7 +28,7 @@ After enabling RPMFusion, run
 
 Reboot.
 
-Cuda drivers for people who need them: (an end user wouldn't really need them, so don't worry about just skipping this)
+Cuda drivers for people who need them: (an end user usually wouldn't really need them, so don't worry about just skipping this)
 
 `sudo dnf install xorg-x11-drv-nvidia-cuda` 
 
@@ -27,7 +38,13 @@ NOTE: I don't use Nvidia, nor am I very well versed in Nvidia on Linux, but the 
 The Fedora KDE spin is intentionally meant to ship with mostly *only* KDE software, and sometimes, some of the stuff it ships are not needed by most, and are perfectly safe for removal.
 
 **Remove ALL of the Akonadi suite** (includes KMail, Kontact, Korganiser): ``sudo dnf rm kf5-akonadi-*``
+ 
+**Remove additional KDE/Fedora apps**: ``sudo dnf remove akregator kamoso mediawriter elisa-player kmag kgpg qt5-qdbusviewer kcharselect kcolorchooser dragon kmines kmahjongg kpat kruler kwalletmanager kmousetool kmouth kolourpaint libreoffice-*``
 
-**Remove additional KDE/Fedora apps** (this is made to match KDE neon's installed packages, which isn't much): ``sudo dnf remove akregator kamoso mediawriter elisa kmag kgpg qt5-qdbusviewer
+Super duper optional:
 
-Will be updated in a bit, but everything in general tips should be good.
+I am of the opinion that dnfdragora is hot garbage, and should not ship with KDE spin due to DNF's CLI interface (or even Discover.) basically doing its job but better.
+
+**Remove dnfdragora**: ``sudo dnf remove dnf dragora`` 
+
+
