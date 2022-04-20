@@ -1,4 +1,6 @@
-# General Fedora Tips.
+# Fedora KDE Tips!
+
+## Made with Fedora KDE 35, but should apply to future versions provided they don't change much about the usual Fedora setup process. (Works on 36!)
 
 **Enable RPMFusion:** You may check https://rpmfusion.org/Configuration if you're uncomfortable with the terminal, otherwise run
 
@@ -32,24 +34,24 @@ or if you have a Kelper GPU (600/700 series)
 
 Reboot.
 
-CUDA drivers for people who need them: (an end user usually wouldn't really need them, so don't worry about just skipping this)
+**CUDA drivers for people who need them: (an end user usually wouldn't really need them, so don't worry about just skipping this)**
 
 `sudo dnf install xorg-x11-drv-nvidia-cuda` 
 
-or if you want them for Kelper GPUs (600/700 series) 
+**or if you want them for Kelper GPUs (600/700 series)**
 
 ``sudo dnf install xorg-x11-drv-nvidia-470xx-cuda``
 
 NOTE: I don't use Nvidia, nor am I very well versed in Nvidia on Linux, but the above should work for *most* people. 
 
-# Optional "debloating" steps:* 
+# Optional "debloating" steps:
 The Fedora KDE spin is intentionally meant to ship with mostly *only* KDE software, and sometimes some of the stuff it ships is not needed by most, and is perfectly safe for removal.
 
 **Remove ALL of the Akonadi suite** (includes KMail, Kontact, Korganiser): ``sudo dnf rm kf5-akonadi-*``
  
 **Remove additional KDE/Fedora apps**: ``sudo dnf remove akregator kamoso mediawriter elisa-player kmag kgpg qt5-qdbusviewer kcharselect kcolorchooser dragon kmines kmahjongg kpat kruler kwalletmanager kmousetool kmouth kolourpaint konversation krdc kfind libreoffice-*``
 
-Super duper optional:
+**Super duper optional:**
 
 I am of the opinion that dnfdragora is hot garbage, and should not ship with KDE spin due to DNF's CLI interface (or even Discover) basically doing its job but better.
 
