@@ -47,7 +47,7 @@ The Fedora KDE spin is intentionally meant to ship with mostly *only* KDE softwa
 
 **Remove ALL of the Akonadi suite** (includes KMail, Kontact, Korganiser): ``sudo dnf rm kf5-akonadi-*``
  
-**Remove additional KDE/Fedora apps**: ``sudo dnf remove akregator kamoso mediawriter elisa-player kmag kgpg qt5-qdbusviewer kcharselect kcolorchooser dragon kmines kmahjongg kpat kruler kwalletmanager kmousetool kmouth kolourpaint libreoffice-*``
+**Remove additional KDE/Fedora apps**: ``sudo dnf remove akregator kamoso mediawriter elisa-player kmag kgpg qt5-qdbusviewer kcharselect kcolorchooser dragon kmines kmahjongg kpat kruler kwalletmanager kmousetool kmouth kolourpaint konversation krdc kfind libreoffice-*``
 
 Super duper optional:
 
