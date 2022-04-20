@@ -1,6 +1,6 @@
 # General Fedora Tips.
 
-**Enable RPMFusion:** https://rpmfusion.org/Configuration / 
+**Enable RPMFusion:** You may check https://rpmfusion.org/Configuration if you're uncomfortable with the terminal, otherwise run
 
 ``sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm``
 
@@ -26,13 +26,21 @@ After enabling RPMFusion, run
 
 ``sudo dnf install akmod-nvidia  xorg-x11-drv-nvidia``
 
+or if you have a Kelper GPU (600/700 series)
+
+``sudo dnf install akmod-nvidia-470xx xorg-x11-drv-nvidia-470xx ``
+
 Reboot.
 
 CUDA drivers for people who need them: (an end user usually wouldn't really need them, so don't worry about just skipping this)
 
 `sudo dnf install xorg-x11-drv-nvidia-cuda` 
 
-NOTE: I don't use Nvidia, nor am I very well versed in Nvidia on Linux, but the above should work for *most* people with 900+ series cards.
+or if you want them for Kelper GPUs (600/700 series) 
+
+``sudo dnf install xorg-x11-drv-nvidia-470xx-cuda``
+
+NOTE: I don't use Nvidia, nor am I very well versed in Nvidia on Linux, but the above should work for *most* people. 
 
 # Optional "debloating" steps:* 
 The Fedora KDE spin is intentionally meant to ship with mostly *only* KDE software, and sometimes some of the stuff it ships is not needed by most, and is perfectly safe for removal.
