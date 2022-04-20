@@ -53,6 +53,6 @@ Super duper optional:
 
 I am of the opinion that dnfdragora is hot garbage, and should not ship with KDE spin due to DNF's CLI interface (or even Discover) basically doing its job but better.
 
-**Remove dnfdragora**: ``sudo dnf remove dnf dragora`` 
+**Remove dnfdragora**: ``sudo dnf remove dnfdragora`` 
 
 
