@@ -87,7 +87,9 @@ I am of the opinion that dnfdragora is *hot garbage*, and should not ship with K
 
 ``sudo dnf remove dnfdragora``
 
-I like the default Plasma wallpapers that Fedora doesn't ship, you can install those with
+I like the default Plasma wallpapers that Fedora doesn't ship, thankfully Fedora still does package them and include them in its repos
+
+**Install default Plasma wallpapers:**
 
 ``sudo dnf in plasma-workspace-wallpapers``
 
