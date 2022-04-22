@@ -59,7 +59,7 @@ Alternatively, you can remove all Akonadi programs/libraries separately with a s
 
 ``sudo dnf rm kf5-akonadi-*``
 
-## The various versions of "debloating" Fedora KDE
+## The two ways of "debloating" Fedora KDE
 
 **Full additional KDE/Fedora program removal (includes "DeAkonadisation")**: 
 
