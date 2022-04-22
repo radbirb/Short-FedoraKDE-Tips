@@ -71,7 +71,10 @@ Alternatively, you can remove all Akonadi programs/libraries separately with a s
  
 You may remove ``libreoffice-*`` or anything else (if you do "DeAknoadisation", expect apps that depend on it to install Aknoadi libraries back) from the commands above if you would like to keep it.
 
-**Results** All in all, this brings down the default package count from around 1700-1800~ to around 1600~
+**Results**
+
+All in all, this brings down the default package count from around 1700-1800~ to around 1600~
+
 **Notice!**
 
 Do not worry about ``dnf`` spitting out ``cannot remove '*insertprogramhere': No such file or directory``, it usually means you either removed the package already, misspelled the package name if you manually typed the commands, or you, for some reason, don't have that package already, eitherway, it'll proceed with the command just fine, and uninstall what it finds.
