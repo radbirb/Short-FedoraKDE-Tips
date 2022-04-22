@@ -61,19 +61,19 @@ Alternatively, you can remove all Akonadi programs/libraries separately with a s
 
 ## The various versions of "debloating" Fedora KDE
 
-**Full additional KDE/Fedora program removal (includes "DeAknoadisation")**: 
+**Full additional KDE/Fedora program removal (includes "DeAkonadisation")**: 
 
 ``sudo dnf remove akregator kamoso mediawriter elisa-player kmag kgpg qt5-qdbusviewer kcharselect kcolorchooser dragon kmines kmahjongg kpat kruler kmousetool kmouth kolourpaint konversation krdc kfind kaddressbook kmail kontact korganizer ktnef libreoffice-* kf5-akonadi-*``
 
-**Additional KDE/Fedora app removal without removing necessary Akonadi libraries (No "DeAkonadisation", only to keep stuff like KGpg, which some may find useful, but is not needed)** 
+**Additional KDE/Fedora app removal without removing necessary Akonadi libraries (No full "DeAkonadisation", only to keep stuff like KGpg, which some may find useful, but is not needed)** 
 
 ``sudo dnf remove akregator kamoso mediawriter elisa-player kmag qt5-qdbusviewer kcharselect kcolorchooser dragon kmines kmahjongg kpat kruler kmousetool kmouth kolourpaint konversation krdc kfind kaddressbook kmail kontact korganizer ktnef libreoffice-*``
  
-You may remove ``libreoffice-*`` or anything else (if you do "DeAknoadisation", expect apps that depend on it to install Aknoadi libraries back) from the commands above if you would like to keep it.
+You may remove ``libreoffice-*`` or anything else (if you do "DeAkonadisation", expect apps that depend on it to install Aknoadi libraries back) from the commands above if you would like to keep it.
 
 **Results**
 
-All in all, this brings down the default package count from around 1700-1800~ to around 1600~
+All in all, this brings down the default package count from around 1700-1800~ to around 1600~.
 
 **Notice!**
 
