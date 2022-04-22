@@ -18,7 +18,7 @@ Update your system first before proceeding further.
 
 via the terminal.
 
-**Additionnal Multimedia Codecs**
+**Additional Multimedia Codecs**
 
 After enabling RPMFusion, run the commands below
 
@@ -34,7 +34,7 @@ After enabling RPMFusion, run
 
 ``sudo dnf install akmod-nvidia  xorg-x11-drv-nvidia``
 
-or if you have a Kelper GPU (600/700 series)
+or if you have a Kepler GPU (600/700 series)
 
 ``sudo dnf install akmod-nvidia-470xx xorg-x11-drv-nvidia-470xx ``
 
@@ -44,7 +44,7 @@ Reboot.
 
 `sudo dnf install xorg-x11-drv-nvidia-cuda` 
 
-**or if you want them for Kelper GPUs (600/700 series)**
+**or if you want them for Kepler GPUs (600/700 series)**
 
 ``sudo dnf install xorg-x11-drv-nvidia-470xx-cuda``
 
@@ -79,12 +79,17 @@ All in all, this brings down the default package count from around 1700-1800~ to
 
 Do not worry about ``dnf`` spitting out ``cannot remove '*insertprogramhere': No such file or directory``, it usually means you either removed the package already, misspelled the package name if you manually typed the commands, or you, for some reason, don't have that package already, eitherway, it'll proceed with the command just fine, and uninstall what it finds.
 
-### Super duper optional stuff
+# Super duper optional stuff
 
 I am of the opinion that dnfdragora is *hot garbage*, and should not ship with KDE spin due to DNF's CLI interface (or even Discover) basically doing its job but better.
 
 **Remove dnfdragora**: 
 
-``sudo dnf remove dnfdragora`` 
+``sudo dnf remove dnfdragora``
+
+I like the default Plasma wallpapers that Fedora doesn't ship, you can install those with
+
+``sudo dnf in plasma-workspace-wallpapers``
+
 
 # Enjoy your Fedora! <3
