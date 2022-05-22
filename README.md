@@ -50,6 +50,8 @@ Reboot.
 
 NOTE: I don't use Nvidia, nor am I very well versed in Nvidia on Linux, but the above should work for *most* people. 
 
+**NOTE 2/IMPORTANT NVIDIA-ONLY NOTICE ON PLASMA WAYLAND IN GENERAL**: While Wayland by default on Nvidia-Only systems is good on GNOME (they have had a LOT more time to figure out those quirks compared to Plasma's true wayland efforts only starting around 5.20+), Nvidia Wayland is not very good on Plasma, with numerous visual bugs and crashes compared to AMD/Intel Wayland on Plasma (I daily drive Plasma Wayland on an Intel iGPU, and it's pretty usable for the most part), so if you come across a really weird visual bug or crash and you're unaware of your current session, check your current Plasma session (System Settings->About System), if it's Wayland, switch to X11 for the time being. (This was written around the time of 5.24.5, things may have changed since.)
+
 # Optional "debloating" steps
 The Fedora KDE spin is intentionally meant to ship with mostly *only* KDE software, and sometimes some of the stuff it ships is not needed by most, and is perfectly safe for removal.
 
