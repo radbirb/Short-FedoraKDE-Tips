@@ -1,3 +1,63 @@
+# NOTICE: THIS GUIDE SHOULD NOT BE USED ANYMORE! Read below for more info and updates on the general state of KDE Spin with regards to this guide.
+
+## This guide will be archived. Some parts of this will still obviously work, but don't expect it to. I will link to upstream documentation for certain parts of this guide to direct anyone who'd need it now.
+
+## Anyways, what's up with Fedora KDE?!
+
+This guide was originally written on F35KDE, where I originally started using Fedora, and since then, I think the spin has generally gotten a lot better! to the point I think Fedora KDE stands neck and neck with Workstation's GNOME in regards to how well integrated it is, and I mean, it's so well made now that someone with a loud enough voice in the Fedora community thought it was so good that [it was unironically worth replacing the default desktop in Workstation for](https://fedoraproject.org/wiki/Changes/FedoraPlasmaWorkstation)... need I say more? (though obviously that proposal isn't happening as is, hopefully the KDE spin does get promoted to an edition of some kind though!)
+
+Things may not look so different in the pre-installed package lists now, but the general experience of the Fedora KDE spin has gotten a lot better since F35/36, IBus doesn't nag you anymore because of Plasma Wayland, You can upgrade major Fedora versions through Discover, [dnfdragora is no longer shipped (huzzah!)](https://pagure.io/fedora-kde/SIG/issue/206) and soon, [you'll be able to enable third party repositories through Plasma Welcome Centre](https://invent.kde.org/teams/vdg/issues/-/issues/46) (in Plasma 6.1 and F41), and many major KDE contributors themselves use Fedora KDE which in turn has fostered a really healthy relationship between KDE itself and Fedora, especially nowadays.
+
+I myself will continue using Fedora KDE as my main Plasma distro, and I still fullheartedly recommend it to anyone looking for a great Plasma experience :)
+
+## Is Fedora KDE still bloated?
+
+Nowadays? I honestly don't feel that it is, even though the package count still seems similar now from back then, it's pretty much shipping the KDE equivalents to apps you'd find in Fedora Workstation. I've began using a lot of the preincluded apps more aswell, moving aside stuff I still uninstall like the Akonadi suite (I'm mostly waiting on the future Merkuro suite to stablise), my Fedora KDE installs remain pretty stock. 
+
+P.S. I've also ventured on to check out OpenSUSE Tumbleweed KDE in the meantime... and frankly, the ""bloat"" often brought up against Fedora KDE is just as existent in Tumbleweed, if not harder to uninstall due to the UX mess that is patterns. I bring up Tumbleweed as it's often championed as "the KDE distro". (it's not, and any openSUSE contributor will tell you that it's not, but that's another topic for another time.)
+
+## I still want to "debloat" Fedora KDE!
+
+Feel free to! you can use the commands here as a sort of reference, but keep in mind that packages names will certainly have changed since back then, and of course, some apps aren't shipped anymore due to them getting abandoned or not surviving the transition to Qt6. Dnf is still a fantastic package manager interface wise and will make things incredibly easy for you to find package names and such. (`dnf search` *app* and then `rpm -q` *packagename* to check if installed)
+
+Alternatively, you may want to check out [Fedora Everything](https://fedoraproject.org/everything/download/), Fedora's Netinstall image, you can get a Fedora KDE install that way and remove any of the app groups you may not want. (ie. Akonadi, Games, etc)
+
+and lastly, if you're willing to learn a new way to use Desktop Linux, Fedora KDE's [atomic equivalent, Kinoite](https://fedoraproject.org/atomic-desktops/kinoite/), is pretty minimal out of the box but some KDE apps were added as flatpaks in F40, though since they're flatpaks, they're very easy to uninstall yourself graphically through Discover. 
+
+## Upstream Documentation for parts of this guide
+
+Enabling RPMFusion: https://rpmfusion.org/Configuration
+
+Installing Nvidia Drivers: https://rpmfusion.org/Howto/NVIDIA?highlight=%28%5CbCategoryHowto%5Cb%29#Current_GeForce.2FQuadro.2FTesla - Please take note of the warning there! it'll save you a scare :) 
+
+Installing Nvidia Drivers (on Kinoite/Atomic KDE): https://docs.fedoraproject.org/en-US/fedora-kinoite/troubleshooting/#_using_nvidia_drivers
+
+Installing Multimedia Codecs: https://docs.fedoraproject.org/en-US/quick-docs/installing-plugins-for-playing-movies-and-music/ and https://rpmfusion.org/Howto/Multimedia (You only really need to swap ffmpeg-free for full ffmpeg, you can also follow the Hardware Accelerated Codecs part, but if you're on a recent enough Intel GPU, it may not be entirely needed.)
+
+Flathub can be enabled through Discover (and will be automatically enabled if you choose to enable third party repositories in F41), but you can still enable Flathub manually by following their guide: https://flathub.org/setup/Fedora
+
+P.S. Nvidia Wayland on Plasma has gotten FAR better since this guide was written, especially on Plasma 6, and expect it get a lot less weird with Xwayland apps in June with Plasma 6.1 landing explicit sync support (which Fedora 40 KDE will most certainly get.) alongside Nvidia releasing the beta version of 555 in May. Read more here: https://zamundaaa.github.io/wayland/2024/04/05/explicit-sync.html
+
+## An additional tip.
+
+As you may know, Fedora 40 KDE doesn't ship the X11 session anymore, and while I am in full support of this decision, I do recognise the fact that some may have certain usecases where they simply can't use Wayland (mainly accessibility for now), so I do want to mention how to install the X11 session just in case someone stumbles upon this ancient guide and needs it.
+
+### WARNING - THE PLASMA X11 SESSION IS !!!NOT!!! SUPPORTED BY THE FEDORA KDE SIG, PLEASE DO NOT REPORT BUGS RELATED TO IT TO THE FEDORA KDE ISSUE TRACKER, OR ASK FOR SUPPORT IN THE KDE SIG MATRIX CHAT. PLEASE CONTACT THE ACTUAL MAINTAINER OF THE PACKAGE FOR SUPPORT INSTEAD, [SEE HERE.](https://packages.fedoraproject.org/pkgs/plasma-workspace-x11/plasma-workspace-x11/)
+
+Installing the Plasma X11 session - `sudo dnf install plasma-workspace-x11`
+
+To switch to it, log out of the KDE Plasma session, and then click the drop down menu located at the bottom left, and select "Plasma (X11)", and then log in as usual.
+
+## The future of this guide and a me-update
+
+I will be archiving this guide as is, I might write a new guide whenever I get my blog up and running, though I'm not sure on what it'd be beyond a general guide to doing all the post-install initial setup you'd wanna do on Fedora. 
+
+I've gotten very busy in recent times, and I'm also trying to become more involved in Fedora and KDE as well, so I generally don't have too much free time nowadays unfortunately :( You can check out one of my first initial contributions to Fedora (https://fedoraproject.org/wiki/KDE), which was rewriting the Fedora Wiki page for KDE to prep it for the [eventual moving of it to Fedora Docs](fedora-kde/SIG/issue/498). Hopefully I can contribute more in the future! :)
+
+Alas, that's enough typing away for now, thank you to those who've starred this guide, and I'm incredibly grateful to those who found any sort of usefulness in this guide (seriously! It made me really happy to hear that from my fellow users back in the day :])
+
+### Here's to many more great years with KDE Plasma on Fedora! <3
+
 # Fedora KDE Tips!
 
 ## Made with Fedora KDE 35, but should apply to future versions provided they don't change much about the usual Fedora setup process. (Works on 36!)
